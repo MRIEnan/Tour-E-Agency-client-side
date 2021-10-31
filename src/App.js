@@ -11,6 +11,7 @@ import PrivateRoute from './Pages/Shared/PrivateRoute/PrivateRoute';
 import SpotBooking from './Pages/SpotDetails/SpotBooking';
 import Footer from './Pages/Shared/Footer/Footer';
 import AllPackages from './Pages/AllPackages/AllPackages';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -42,6 +43,9 @@ function App() {
                   </PrivateRoute>
                   <Route path='/addSpot'>
                       <AddSpotContainer></AddSpotContainer>
+                  </Route>
+                  <Route path='*'>
+                      <NotFound></NotFound>
                   </Route>
               </Switch>
               <Footer></Footer>

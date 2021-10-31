@@ -1,0 +1,18 @@
+.not-found-container{
+    text-align: center;
+    margin: 100px auto;
+}
+
+.not-found-icon{
+    font-size: 100px;
+    color: #233932;
+}
+.not-found-return-button{
+    text-decoration: none;
+    background-color: #ff7f47;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
