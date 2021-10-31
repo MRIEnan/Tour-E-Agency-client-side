@@ -1,0 +1,105 @@
+.spot-booking-main-container{
+    text-align: center;
+}
+.spot-booking-main-container h1{
+    margin: 10px;
+    color: #262339;
+    display: inline-block;
+}
+.spot-booking-main-container small{
+    margin: 4px;
+}
+
+.spot-booking-form-container{
+    width: 60%;
+    margin: auto;
+}
+
+.spot-booking-form-container form{
+    display: grid;
+    width: 80%;
+    background-color: #ff7f47;
+    margin: 0 auto 20px auto;
+    border-radius: 6px;
+}
+
+.spot-booking-form-container form input{
+    height: 30px;
+    margin: 10px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .33);
+}
+.spot-booking-form-container form input[type=submit]{
+    background-color: #304f47;
+    /* background-color: #030303; */
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    height: 36px;
+}
+
+.spot-booking-form-container form input[type=submit]:focus{
+    background-color: #ff7f47;
+}
+
+
+.spot-booking-submitted-main-container{
+    padding: 40px 0;
+    text-align: center;
+}
+
+.spot-booking-submitted-main-container a{
+    text-decoration: none;
+    color: #ff7f47;
+}
+
+.spot-booking-submitted-main-container h1{
+    margin: 10px;
+}
+.spot-booking-submitted-main-container h3{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.date-react{
+    width: calc(100% - 30px);
+    cursor: pointer;
+}
+
+.react-datepicker{
+    width: 180px;
+    background-color: seashell;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.react-datepicker__day-names{
+    padding: 2px 4px;
+    /* width: calc(100% - 8px); */
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    background-color: #304f47;
+    justify-content: space-between;
+    color: #ffffff;
+}
+.react-datepicker__header {
+    background-color: #304f47;
+    color: #ffffff;
+    margin-top: 4px;
+}
+
+.react-datepicker__month{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 667px) {
+    .spot-booking-form-container{
+        width: 100%;
+    }
+}

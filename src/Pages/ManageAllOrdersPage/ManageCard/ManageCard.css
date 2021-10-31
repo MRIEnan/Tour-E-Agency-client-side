@@ -1,0 +1,40 @@
+.manage-card{
+    width: 250px;
+    height: 120px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .33);
+}
+.manage-card:hover{
+    box-shadow: 0 0 2px 2px rgba(0,0,0,.33);
+}
+
+.manage-card h4{
+    margin: 3px;
+}
+
+.manage-card-image-container{
+    width: 120px;
+    margin-right: 10px;
+    text-align: center;
+}
+.manage-card-image-container img{
+    width: 100%;
+    height: 75%;
+}
+.manage-card-info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.manage-card-info-container h4{
+    text-transform: capitalize;
+}
+
+.manage-card-tour-day{
+    letter-spacing: 2px;
+    color: #ff7f47;
+    font-weight: 700;
+}

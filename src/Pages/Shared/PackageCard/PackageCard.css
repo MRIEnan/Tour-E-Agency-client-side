@@ -1,0 +1,46 @@
+.package-card{
+    width: 280px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .34);
+    border-radius: 6px;
+}
+.package-card:hover{
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, .34);
+}
+
+.package-card-image{
+    width: 100%;
+}
+
+.package-card-image img{
+    width: 100%;
+    height: 186.47px;
+    border-radius: 2px;
+}
+
+.package-card-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.package-card-top h4{
+    margin: 10px 0;
+    font-size: 20px;
+    color: rgb(48, 48, 48);
+}
+.package-card-top h4 small{
+    font-size: 13px;
+}
+
+.package-card-spotName{
+    margin: 0;
+    color: #ff7f47;
+    text-transform: capitalize;
+}
+
+.package-card-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}

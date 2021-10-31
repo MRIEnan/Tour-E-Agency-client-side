@@ -1,0 +1,14 @@
+.why-tour-e-card{
+    text-align: center;
+    width: 240px;
+    height: 200px;
+    background-color: #304f47;
+    color: #ffffff;
+    margin: 10px;
+    padding: 10px;
+}
+
+.why-tour-e-card i{
+    margin-top: 20px;
+    font-size: 60px;
+}

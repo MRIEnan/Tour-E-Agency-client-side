@@ -1,0 +1,84 @@
+/* https://image.freepik.com/free-photo/flat-lay-yellow-luggage-with-copy-space_23-2148786124.jpg */
+
+.home-top-banner-main-container{
+    background: url('https://image.freepik.com/free-photo/flat-lay-yellow-luggage-with-copy-space_23-2148786124.jpg');
+    /* background-position: bottom; */
+    background-repeat: no-repeat;
+    height: 460px;
+    display: flex;
+    background-size: cover;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.home-top-banner-text-container{
+    width: 40%
+}
+
+.home-top-banner-text-container h1{
+    font-size: 36px;
+    margin: 10px 0;
+    color: #304f47;
+}
+.home-top-banner-text-container p{
+    font-size: 20px;
+    margin: 5px 0;
+    color: #203530;
+    font-weight: 400;
+}
+.home-top-banner-nature-container{
+    font-size: 60px;
+    color: #269e0e;
+}
+
+.btn-regular-container{
+    position: relative;
+    height: 50px;
+    width: 120px;
+    margin-top: 10px;
+    border-radius: 3px;
+    background-color:#304f47;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+.btn-regular{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #ff7f47;
+    z-index: 3;
+    left: -84%;
+    border-radius: 40px;
+    transition: all .6s;
+    cursor: pointer;
+}
+
+.btn-regular-container h3{
+    position: absolute;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.btn-regular-container:hover .btn-regular{
+    transition: all .6s;
+    left: 0;
+    border-radius: 0;
+}
+/* #ff7f47 */
+
+
+
+@media only screen and (max-width: 667px) {
+    .home-top-banner-main-container{
+        height: 300px;
+        padding-left: 10px;
+    }
+    .home-top-banner-text-container{
+        width: 100%;
+    }
+}

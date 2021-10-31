@@ -1,0 +1,29 @@
+.login-main-container{
+    text-align: center;
+    padding-bottom: 100px;
+}
+.login-main-container h2{
+    color: #269e0e;
+}
+.login-icon-container{
+    background-color: #304f47;
+    height: 40px;
+    width: 200px;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    border-radius: 30px;
+}
+
+.login-google-icon{
+    color: #ff7f47;
+    font-size: 30px;
+}
+
+.login-icon-container:hover{
+    background-color: #ff7f47;
+}
+
+.login-icon-container:hover .login-google-icon{
+    color: #304f47;
+}

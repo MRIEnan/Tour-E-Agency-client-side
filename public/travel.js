@@ -1,0 +1,8 @@
+const travel =[
+    {imageLink : "https://img-public.freepik.com/preview/free-photo/amazing-view-volcano_72229-1407.jpg",price: 180, days: 5, night: 6, spotName: 'Paris Hill Tour', country: 'Spain', description: 'Very beautiful and charmed place to visit...', rating: 8},
+    {imageLink : "https://img-public.freepik.com/preview/free-photo/amazing-view-volcano_72229-1407.jpg",price: 280, days: 5, night: 6, spotName: 'Lake Garda, Italy', country: 'Italy', description: 'Very beautiful and charmed place to visit...', rating: 8},
+    {imageLink : "https://img-public.freepik.com/preview/free-photo/amazing-view-volcano_72229-1407.jpg",price: 120, days: 5, night: 6, spotName: 'Mount Dtna, Italy', country: 'Italy', description: 'Very beautiful and charmed place to visit...', rating: 8},
+    {imageLink : "https://img-public.freepik.com/preview/free-photo/amazing-view-volcano_72229-1407.jpg",price: 300, days: 5, night: 6, spotName: 'Amlfi Costa, Italy', country: 'Italy', description: 'Very beautiful and charmed place to visit...', rating: 8},
+    {imageLink : "https://img-public.freepik.com/preview/free-photo/amazing-view-volcano_72229-1407.jpg",price: 240, days: 5, night: 6, spotName: 'French Rivira', country: 'France', description: 'Very beautiful and charmed place to visit...', rating: 8},
+    {imageLink : "https://img-public.freepik.com/preview/free-photo/amazing-view-volcano_72229-1407.jpg",price: 145, days: 5, night: 6, spotName: 'Lake Geneva, France', country: 'France', description: 'Very beautiful and charmed place to visit...', rating: 8}
+]

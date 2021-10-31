@@ -1,0 +1,17 @@
+/* https://images.unsplash.com/photo-1496950866446-3253e1470e8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80 */
+
+.why-tour-e-main-container{
+    background: url('https://images.unsplash.com/photo-1496950866446-3253e1470e8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80');
+    background-position: center;
+}
+
+.why-tour-e-main-container-header{
+    background-color: rgba(122, 122, 122, 0.44);
+}
+
+.why-tour-e-main-card-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
