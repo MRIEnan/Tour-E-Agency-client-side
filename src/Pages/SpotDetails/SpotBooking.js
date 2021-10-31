@@ -3,7 +3,6 @@ import { Controller, useForm } from 'react-hook-form';
 import DatePicker from 'react-datepicker';
 import { NavHashLink } from 'react-router-hash-link';
 import useAuth from '../../hooks/useAuth';
-import PackageCard from '../Shared/PackageCard/PackageCard';
 import './SpotBooking.css';
 
 const SpotDetails = () => {
@@ -11,12 +10,23 @@ const SpotDetails = () => {
     const { control, register,reset, handleSubmit, formState: { errors } } = useForm();
     const {user,sId} = useAuth();
     const [tourDate,setTourDate]= useState(null);
+    const [tourSpot,setTourSpot] = useState({})
+    const [isGet,setIsGet] = useState(false)
+
     console.log(sId);
+    useEffect(()=>{
+        fetch(`https://grisly-vampire-60544.herokuapp.com/spots/${sId}`)
+        .then(res => res.json())
+        .then(data => {
+            setTourSpot(data)
+            setIsGet(true)
+            
+        })
+    },[isGet]);
     const onSubmit = data => {
         data.spotUid = sId;
         data.tourDay = tourDate;
-        console.log(data)
-        fetch('http://localhost:5000/spotBooking',{
+        fetch('https://grisly-vampire-60544.herokuapp.com/spotBooking',{
             method: 'POST',
             headers:{
                 'content-type':'application/json'
@@ -25,7 +35,6 @@ const SpotDetails = () => {
         })
         .then(res => res.json())
         .then(result => {
-            console.log(result)
             if(result.insertedId){
                 setSubmitted(true);
                 alert('Booking Successful');
@@ -33,6 +42,13 @@ const SpotDetails = () => {
             }
         })
     };
+    if(!isGet){
+        return (
+            <div>
+                <h1 style={{textAlign: "center"}}>Please wait for a while...</h1>
+            </div>
+        )
+    }
 
     if(submitted){
         return(
@@ -45,8 +61,21 @@ const SpotDetails = () => {
     }
 
     return (
-        <div className="spot-booking-main-container">
+        <div id="spot-booking-form" className="spot-booking-main-container">
             <h1>Please</h1><small>complete your booking</small>
+            <div style={{margin: 'auto'}} className="manage-card">
+            <div className="manage-card-image-container">
+                <img src={tourSpot?.imageLink} alt="" />
+                <small className="manage-card-tour-day">price: ${tourSpot?.price}</small>
+            </div>
+            <div className="manage-card-info-container">
+                <h4>{tourSpot?.spotName}</h4>
+                <NavHashLink to="/allPackages##all-packages-top" className="btn-regular-container">
+                        <h3>Packages</h3>
+                        <div className="btn-regular"></div>
+                    </NavHashLink>
+            </div>
+        </div>
             <div className="spot-booking-form-container">
                 <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
                     <input defaultValue={user.displayName} {...register("name")} />

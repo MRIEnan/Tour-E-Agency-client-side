@@ -8,7 +8,7 @@ const CountryPack = (props) => {
     const [spotCountry,setSpotCountry] = useState([]);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/spotss?country=${name}`)
+        fetch(`https://grisly-vampire-60544.herokuapp.com/spotss?country=${name}`)
         .then(res => res.json())
         .then(data => setSpotCountry(data));
     },[]);

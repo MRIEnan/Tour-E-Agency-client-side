@@ -1,7 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 import AuthProvider from './context/AuthProvider';
-import AboutContainer from './Pages/AboutPage/AboutContainer/AboutContainer';
 import HomeContainer from './Pages/HomePage/HomeContainer/HomeContainer';
 import LoginContainer from './Pages/LoginPage/LoginContainer/LoginContainer';
 import MyOrdersContainer from './Pages/MyOrdersPage/MyOrdersContainer/MyOrdersContainer';
@@ -11,6 +10,7 @@ import Navbar from './Pages/Shared/Navbar/Navbar';
 import PrivateRoute from './Pages/Shared/PrivateRoute/PrivateRoute';
 import SpotBooking from './Pages/SpotDetails/SpotBooking';
 import Footer from './Pages/Shared/Footer/Footer';
+import AllPackages from './Pages/AllPackages/AllPackages';
 
 function App() {
   return (
@@ -28,8 +28,8 @@ function App() {
                   <Route path='/login'>
                       <LoginContainer></LoginContainer>
                   </Route>
-                  <Route path='/about'>
-                      <AboutContainer></AboutContainer>
+                  <Route path='/allPackages'>
+                      <AllPackages></AllPackages>
                   </Route>
                   <PrivateRoute path='/myOrders'>
                       <MyOrdersContainer></MyOrdersContainer>

@@ -10,7 +10,7 @@ const PackageContainer = () => {
     const [ packages,setPackages ] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/spots')
+        fetch('https://grisly-vampire-60544.herokuapp.com/spots')
         .then(res => res.json())
         .then(data => setPackages(data));
     },[packages]);

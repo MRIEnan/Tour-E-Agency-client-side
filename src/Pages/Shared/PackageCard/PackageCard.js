@@ -5,7 +5,7 @@ import { NavHashLink } from 'react-router-hash-link';
 
 const PackageCard = (props) => {
     const {imageLink,price,days,night,spotName, description,rating,_id} = props.pack;
-    const packLink = `spots/${_id}`
+    const packLink = `spots/${_id}#spot-booking-form`
     return (
         <div className="package-card">
             <div className="package-card-image">

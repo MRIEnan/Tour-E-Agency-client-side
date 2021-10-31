@@ -25,8 +25,7 @@ const AddSpotContainer = () => {
         newObj.country=country;
         newObj.description=description;
         newObj.rating=rating;
-        console.log('newObj',newObj);
-        fetch('http://localhost:5000/addSpots',{
+        fetch('https://grisly-vampire-60544.herokuapp.com/addSpots',{
             method: 'POST',
             headers: {
                 'content-type':'application/json'
@@ -54,7 +53,7 @@ const AddSpotContainer = () => {
 
     return (
         <div className="add-spot-main-container">
-            <h2>Add a new Spot</h2>
+            <h2 id="add-spot-top">Add a new Spot</h2>
             <div className="add-spot-form-container">
                 <form onSubmit={handleAddSpot}>
                     <input onChange={e=>setSpotName(e.target.value)} type="text" placeholder="Tour spot name" required/>

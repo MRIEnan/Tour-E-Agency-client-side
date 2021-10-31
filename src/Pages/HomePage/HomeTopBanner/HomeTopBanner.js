@@ -4,7 +4,7 @@ import './HomeTopBanner.css';
 
 const HomeTopBanner = () => {
     return (
-        <div className="home-top-banner-main-container">
+        <div id="home-top-bonner" className="home-top-banner-main-container">
             <div className="home-top-banner-text-container">
                 <h1>Let's say HI to <span className="home-top-banner-nature-container">Nature</span>.</h1>
                 <div className="home-top-banner-text-inner-container">

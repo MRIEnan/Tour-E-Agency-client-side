@@ -22,7 +22,7 @@ const LoginContainer = () => {
         .finally(()=>{setIsLoading(false)})
     }
     return (
-        <div className="login-main-container">
+        <div id="login-conainer-top" className="login-main-container">
             <h2>Please Login</h2>
             <div className="login-icon-container" onClick={handleGoogleLogin}><FontAwesomeIcon className="login-google-icon" icon={faGoogle}/></div>
         </div>

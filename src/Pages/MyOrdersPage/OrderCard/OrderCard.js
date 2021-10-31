@@ -3,15 +3,13 @@ import { NavHashLink } from 'react-router-hash-link';
 
 const OrderCard = (props) => {
     const {spotArr} = props;
-    // console.log(spotArr[1].slice(/^d{4}[\/.]\d{1,2}[\/.]\d{1,2}$/))
     const day = (spotArr[1].split('T')[0])
     const [spot,setSpot] = useState({})
     useEffect(()=>{
-        fetch(`http://localhost:5000/spots/${spotArr[0]}`)
+        fetch(`https://grisly-vampire-60544.herokuapp.com/spots/${spotArr[0]}`)
         .then(res => res.json())
         .then(data => {
             setSpot(data)
-            console.log(data)
         })
     },[]);
     return (

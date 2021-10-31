@@ -7,12 +7,11 @@ import './ManageAllOrdersContainer.css';
 const ManageAllOrdersContainer = () => {
 
     const {user} = useAuth();
-    console.log(user)
 
     const [myBookedSpot,setMyBookedSpot]= useState([]);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/spotBooking/mySpots?email=${user.email}`)
+        fetch(`https://grisly-vampire-60544.herokuapp.com/spotBooking/mySpots?email=${user.email}`)
         .then(res => res.json())
         .then(data => {
             setMyBookedSpot(data)
@@ -23,7 +22,7 @@ const ManageAllOrdersContainer = () => {
     const handleDeleteSpot = uid => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if(proceed){
-            const url = `http://localhost:5000/spotBooking/${uid}`;
+            const url = `https://grisly-vampire-60544.herokuapp.com/spotBooking/${uid}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -44,7 +43,7 @@ const ManageAllOrdersContainer = () => {
 
     return(
         <div className="manage-all-order-route">
-            <h1>Manage Your all Orders</h1>
+            <h1 id="manage-all-order-top">Manage Your all Orders</h1>
             <div className="manage-all-orders-main-container">
             {
                 myBookedSpot.map(mySpot => <ManageCard handleDeleteSpot={handleDeleteSpot} mySpot={mySpot} ></ManageCard>)

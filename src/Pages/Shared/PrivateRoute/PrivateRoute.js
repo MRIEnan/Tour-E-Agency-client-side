@@ -6,7 +6,6 @@ const PrivateRoute = ({children,...rest}) => {
     const {user,isLoading,setSId} = useAuth();
     const id = rest?.computedMatch?.params?.id || '';
     setSId(id);
-    console.log(id);
     if(isLoading){
         return (
             <div>

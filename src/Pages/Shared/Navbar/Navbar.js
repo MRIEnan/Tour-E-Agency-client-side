@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import { NavHashLink } from 'react-router-hash-link';
 import useAuth from '../../../hooks/useAuth';
@@ -8,7 +8,6 @@ import { faGoogle,faEnvira, faInstagram, faTwitter, faWhatsapp } from '@fortawes
 
 const Navbar = () => {
     const {user,logOut} = useAuth();
-    console.log(user);
 
     const handleGoogleLogOut = () => {
         logOut();
@@ -41,12 +40,12 @@ const Navbar = () => {
                     <FontAwesomeIcon className="nav-icon-controller" onClick={()=>setToggleClass(!toggleClass)} icon={faTimes} style={{color: 'red'}}/>}
                 </div>
                 <div className={!toggleClass?"nav-item-container":"nav-item-container-off"}>
-                    <NavHashLink to='/home'><button>Home</button></NavHashLink>
-                    <NavHashLink to='/about'><button>about</button></NavHashLink>
-                    <NavHashLink title='my orders' to='/myOrders'><button><FontAwesomeIcon icon={faShoppingCart} /></button></NavHashLink>
-                    {!user?.email && <NavHashLink to='/login'><button><FontAwesomeIcon icon={faSignInAlt} /></button></NavHashLink>}
-                    {user.email && <NavHashLink to='/manageAllOrders'><button>Manage</button></NavHashLink>}
-                    {user.email && <NavHashLink to='/addSpot'><button>Add Spot</button></NavHashLink>}
+                    <NavHashLink to='/home#home-top-bonner'><button>Home</button></NavHashLink>
+                    <NavHashLink to='/allPackages#all-packages-top'><button>Packages</button></NavHashLink>
+                    <NavHashLink title='my orders' to='/myOrders#my-orders'><button><FontAwesomeIcon icon={faShoppingCart} /></button></NavHashLink>
+                    {!user?.email && <NavHashLink to='/login#login-conainer-top'><button><FontAwesomeIcon icon={faSignInAlt} /></button></NavHashLink>}
+                    {user.email && <NavHashLink to='/manageAllOrders#manage-all-order-top'><button>Manage</button></NavHashLink>}
+                    {user.email && <NavHashLink to='/addSpot#add-spot-top'><button>Add Spot</button></NavHashLink>}
                     {user.email && <button onClick={handleGoogleLogOut}>Log Out</button>}
                 </div>
             </div>

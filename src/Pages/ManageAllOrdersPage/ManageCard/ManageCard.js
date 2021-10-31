@@ -3,12 +3,10 @@ import  './ManageCard.css';
 
 const ManageCard = (props) =>{
     const{ handleDeleteSpot, mySpot} = props;
-    console.log(mySpot)
-    // const [run,setRun] = useState(true);
     const[spot,setSpot] = useState({})
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/spots/${mySpot.spotUid}`)
+        fetch(`https://grisly-vampire-60544.herokuapp.com/spots/${mySpot.spotUid}`)
         .then(res => res.json())
         .then(data => {
             setSpot(data)
